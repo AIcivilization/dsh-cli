@@ -1,0 +1,73 @@
+{
+  "name": "dsh-cli",
+  "version": "0.1.0",
+  "description": "A bridge from DeepSeek Harness to the AI tools you already pay for: make videos with MiniMax Code and delegate coding to Qoder. · 让 DSH 调用你本机已登录的 AI 工具：用 MiniMax Code 出视频，把代码任务委托给 Qoder。",
+  "keywords": [
+    "dsh-plugin",
+    "dsh-plugins",
+    "dsh",
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "deepseek",
+    "cordis",
+    "cli",
+    "bridge",
+    "ai-agent",
+    "minimax",
+    "minimax-code",
+    "hailuo",
+    "qoder",
+    "video-generation",
+    "subscription",
+    "出视频",
+    "海螺"
+  ],
+  "license": "MIT",
+  "author": "AIcivilization",
+  "homepage": "https://github.com/AIcivilization/dsh-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIcivilization/dsh-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AIcivilization/dsh-cli/issues"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./actions": {
+      "default": "./lib/actions.js"
+    },
+    "./tools": {
+      "default": "./lib/tools.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22.13",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

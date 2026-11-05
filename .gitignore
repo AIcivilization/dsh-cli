@@ -1,0 +1,6 @@
+node_modules/
+*.tgz
+*.log
+.DS_Store
+# 记录本机各工具的登录和订阅情况，不公开
+docs/能力盘点.md
